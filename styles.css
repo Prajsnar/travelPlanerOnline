@@ -337,10 +337,6 @@ body {
     display: flex;
 }
 
-.checkboxButton {
-    visibility: hidden;
-}
-
 .labelButton:hover {
     background-color: white;
 }

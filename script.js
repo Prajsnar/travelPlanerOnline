@@ -47,22 +47,24 @@ document.getElementById('calculate').addEventListener('click', () => {
         isAutoStopCalculation odpowiada za automatyczne obliczanie przystanków
     */
 
-    const iskmDoubleChecked = document.getElementById('doubleKM').checked;
-    const isDriverIncluded = document.getElementById('driverIncluded').checked;
-    const isAutoStopCalculation = document.getElementById('stopsAuto').checked;
+    const iskmDoubleChecked = document.getElementById('doubleKM');
+    const isDriverIncluded = document.getElementById('driverIncluded');
+    const isAutoStopCalculation = document.getElementById('stopsAuto');
 
-    if (iskmDoubleChecked) {
+
+
+    if (iskmDoubleChecked.classList.contains('active')) {
         data.kmCount *= 2;
         variables.fuelBurned *= 2;
         variables.fuelCost *= 2;
     }
 
-    if (isDriverIncluded) {
+    if (isDriverIncluded.classList.contains('active')) {
         data.passengerCount += 1;
     }
 
 
-    if (isAutoStopCalculation) {
+    if (isAutoStopCalculation.classList.contains('active')) {
         const fuelTankCapacity = 40;
         const fuelConsumption = data.fuelConsumption;
         const reserve = 70;
@@ -286,16 +288,11 @@ currencyFetch();
 
 
 /*
-    Funkcje do zmiany koloru tła i zaznaczania checkboxa w opcjach do kliknięcia
+    Funkcje do zmiany koloru tła po kliknięciu
 */
 
 document.querySelectorAll('.labelButton').forEach((label) => {
-    label.addEventListener('click', (event) => {
-        const checkbox = label.querySelector('input[type="checkbox"]');
-        if (event.target.tagName !== 'INPUT') {
-            checkbox.checked = !checkbox.checked; 
+    label.addEventListener('click', () => {
             label.classList.toggle('active');
-            console.log(checkbox.checked);
-        };
     });
 });
