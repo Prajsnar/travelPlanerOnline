@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://kit.fontawesome.com/ab60ea3acf.js" crossorigin="anonymous"></script>
+    <title>Planer Wycieczki</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <h2>Obliczanie trasy</h2>
+    </div>
+    <div class="main-inputs">
+        <div class="inputs-icons">
+            <i class="fa-solid fa-file-signature"></i>
+            <i class="fa-solid fa-building-circle-arrow-right"></i>
+            <i class="fa-solid fa-car-tunnel"></i>
+            <i class="fa-solid fa-dollar-sign"></i>
+            <i class="fa-solid fa-children"></i>
+            <i class="fa-solid fa-hand"></i>
+        </div>
+        <div class="inputs" id="inputs">
+            <input type="text" id="travelName" placeholder="Podaj nazwę trasy, np. Wieliczka - Berlin">
+            <input type="number" id="kmCount" placeholder="Podaj liczbę kilometrów do przejechania">
+            <input type="number" id="fuelConsumption" placeholder="Podaj spalanie auta na 100km">
+            <input type="number" id="litrCost" placeholder="Podaj aktualny koszt za litr paliwa">
+            <input type="number" id="passengerCount" placeholder="Podaj ilość osób która z Tobą jedzie">
+            <input type="number" id="stopsCount" placeholder="Podaj liczbę postojów na trasie">
+        </div>
+        <div class="currencyList">
+            <ul id="currency"></ul>
+        </div>
+    </div>
+    <div class="main-checks">
+        <div class="main-checks-label">
+            <label class="checkbox-label">
+                <label class="labelButton" id="doubleKM">
+                    Zaznacz jeżeli podałeś liczbę kilometrów w jedną stronę
+                    <input type="checkbox" class="checkboxButton" id="doubleKM">
+                </label>
+                <label class="labelButton" id="label">
+                    Zaznacz jeżeli kierowca ma być wliczony do kosztów
+                    <input type="checkbox" class="checkboxButton" id="driverIncluded">
+                </label>
+                <label class="labelButton" id="label">
+                    Zaznacz jeżeli chcesz aby program wyliczył liczbę postojów za Ciebie
+                    <input type="checkbox" class="checkboxButton" id="stopsAuto">
+                </label>
+            </label>
+        </div>
+    </div>
+    <div class="main-checks-button">
+        <button id="calculate">Oblicz</button>
+        <button id="saveList">Zapisz</button>
+        <button id="clearList">Wyczyść listę</button>
+        <button id="clearOne">Usuń po nazwie</button>
+        <button id="connectData">Połącz dane z tras</button>
+        <div id="savedList"></div>
+    </div>
+    <div class="text-bottom">
+        <div class="result" id="result">
+            <h2>Podsumowanie:</h2>
+        </div>
+        <div class="saved" id="saved">
+            <h2>Zapisane dane:</h2>
+        </div>
+        <div class="connected" id="connected">
+            <h2>Połączone dane:</h2>
+        </div>
+    </div>
+    <div class="text-bottom-results">
+        <p id="resultText"></p>
+        <p id="savedData"></p>
+        <p id="connectedData"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

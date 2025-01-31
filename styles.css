@@ -1,0 +1,380 @@
+/* body {
+    margin: 0px;
+    background-image:radial-gradient(circle, rgb(140, 140, 140), rgb(105, 105, 105));
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    border: 2px, solid, rgba(30, 101, 255, 0.336);
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    margin: 5px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 35.4%;
+}
+
+.inputs input {
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(30, 30, 30);
+    padding: 10px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(30, 101, 255, 0.15);
+}
+
+.inputs input:focus {
+    border: none;
+    outline: none;
+}
+
+.inputs input::placeholder {
+    color: rgba(30, 30, 30, 0.5)
+}
+
+.main-checks-label {
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 34.1%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(30, 101, 255, 0.15);
+}
+
+.main-checks-button {
+    display: flex;
+    margin: 5px;
+    padding-top: 1px;
+}
+
+.main-checks-button button {
+    font-size: small;
+    font-weight: bold;
+    width: 130px;
+    height: 30px;
+    color: rgb(30, 30, 30);
+    box-shadow: 5px 5px 5px rgba(30, 101, 255, 0.15);
+    border-radius: 5px;
+    border: none;
+    margin-left: 2px;
+}
+
+.main-checks-button button:hover {
+    background-color: rgb(200, 200, 200);
+    transition: ease-in-out 0.5s;
+}
+
+.text-bottom {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    gap: 9%;
+}
+
+.result, .saved, .connected {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 5px 5px 5px rgba(30, 101, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 450px;
+    height: 60px;
+}
+
+.text-bottom-results{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 5px;
+}
+
+.text-bottom-results p {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 5px 5px 5px rgba(30, 101, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    height: 200px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.currencyList {
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+    height: 250px;
+    width: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 5px 5px 5px rgba(30, 101, 255, 0.15);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.currencyList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.currencyList li {
+    background-color: rgba(30, 101, 255, 0.2);
+    border: 3px solid rgb(30, 101, 255, 0.6);
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 5px 5px rgba(30, 101, 255, 0.15);
+    user-select: none;
+}
+
+.currencyList li:hover {
+    background-color: rgba(30, 101, 255, 1); 
+}
+
+.currency.active {
+    background-color: rgba(30, 101, 255, 1);
+    color: white;
+} */
+
+
+/* Drugi styl */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, serif;
+}
+
+body {
+    background-color: rgb(59, 59, 59);
+}
+
+.navbar {
+    font-size: 70%;
+    padding: 20px;
+    margin: 0;
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.navbar h2 {
+    background-color: rgba(252, 192, 27, 1);
+    transition: box-shadow 0.2s ease-in-out;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: none;
+    user-select: none;
+}
+
+.navbar h2:hover {
+    box-shadow: 0px 0px 7px rgb(255, 202, 56);
+}
+
+.main-inputs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+    width: 45em;
+}
+
+#inputs input {
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    font-weight: 600;
+}
+
+#inputs input::placeholder {
+    color: white;
+    font-weight: 300;
+    font-style: italic;
+    text-align: right;
+}
+
+#inputs input:focus {
+    outline: none;
+    color: white;
+}
+
+.inputs-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 6px;
+
+}
+
+.inputs-icons i {
+    background-color: rgb(252, 192, 27);
+    padding: 10px;
+    width: 50px;
+    height: 39.5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.currencyList {
+    background-color: rgb(41, 41, 41);
+    border-radius: 10px;
+    margin: 5px;
+    height: 265px;
+    width: 20em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.currencyList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.currencyList li {
+    background-color: rgba(252, 192, 27, 1);
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.currencyList li:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.currency.active {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.main-checks {
+    background-color: rgb(41, 41, 41);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    max-width: 69em;
+}
+
+.checkbox-label {
+    display: flex;
+    flex-direction: row;
+    max-width: max-content;
+    gap: 10px;
+}
+
+ .checkbox-label label {
+    appearance: none;
+    align-items: center;
+    text-align: center;
+    height: max-content;
+    font-weight: 700;
+    font-size: 100%;
+    color: black;
+    background-color: rgba(252, 192, 27, 1);
+    user-select: none;
+    border-radius: 25px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.labelButton {
+    display: flex;
+}
+
+.checkboxButton {
+    visibility: hidden;
+}
+
+.labelButton:hover {
+    background-color: white;
+}
+
+.labelButton.active {
+    background-color: white;
+}
+
+ .main-checks-button {
+    padding: 10px;
+    margin: 5px;
+    gap: 5px;
+    align-items: center;
+    background-color: rgb(41, 41, 41);
+    max-width: max-content;
+    border-radius: 10px;
+ }
+
+ .newButton {
+    margin-top: 5px;
+    margin-right: 4px;
+ }
+ 
+ .main-checks-button button {
+    padding: 10px;
+    background-color: rgba(252, 192, 27, 1);
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    transition: all 0.3s ease;
+ }
+
+ .main-checks-button button:hover {
+    background-color: white;
+    cursor: pointer;
+ }
+
